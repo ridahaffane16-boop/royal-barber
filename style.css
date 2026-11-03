@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #05070a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --blue: #00aaff;
+    --dark: #080c12;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #05070a;
+    border-bottom: 1px solid #15212e;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background:
+    linear-gradient(90deg, #05070a 35%, transparent),
+    url("barber.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: var(--blue);
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero-content > p:not(.small-title) {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: black;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #00aaff55;
+}
+
+/* SERVICES */
+
+section:not(.hero) {
+    padding: 70px 8%;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h2 span {
+    color: var(--blue);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #0d131c;
+    padding: 30px;
+    border: 1px solid #12354b;
+    border-radius: 15px;
+    text-align: center;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaa;
+    margin: 15px 0;
+}
+
+.service-card strong {
+    display: inline-block;
+    background: var(--blue);
+    color: black;
+    padding: 8px 25px;
+    border-radius: 20px;
+}
+
+/* GALLERY */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #12354b;
+    transition: .3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+/* ABOUT */
+
+#about {
+    background: #080c12;
+    text-align: center;
+}
+
+#about p {
+    max-width: 650px;
+    margin: auto;
+    color: #bbb;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* CONTACT */
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin: 15px;
+    color: #ccc;
+}
+
+.whatsapp {
+    background: #20d66b;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #080c12;
+    padding: 25px;
+    text-align: center;
+    color: #888;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 400px;
+        background:
+        linear-gradient(90deg, #05070a99, #05070a99),
+        url("barber.jpg") center/cover;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .services-container,
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 230px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
